@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <style>
+        /* General page styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Blog Container */
+        .blog-container {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+            margin-top: 20px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        /* Main Content Area */
+        .main-content {
+            width: 70%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 25%;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        /* Blog Post Title */
+        .post-title {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* Blog Post Subtitle */
+        .post-subtitle {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Blog Content */
+        .post-content {
+            line-height: 1.6;
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Blog Content Image */
+        .post-content img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        /* Sidebar - Related Posts */
+        .sidebar .related-posts ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar .related-posts li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar .related-posts a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        /* Styling the Blog Post Links */
+        .sidebar .related-posts a:hover {
+            color: #0056b3;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .blog-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .main-content, .sidebar {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="blog-container">
+        <!-- Main Blog Content -->
+        <div class="main-content">
+            <h1 class="post-title">A Journey Through the Mountains</h1>
+            <h2 class="post-subtitle">Exploring the Hidden Wonders of Nature</h2>
+
+            <div class="post-content">
+                <img src="pic5.webp" alt="Mountain View">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. 
+                </p>
+                <p>
+                    <img src="pic6.jpg" alt="Nature Adventure">
+                    Pellentesque auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Curabitur sit amet mauris morbi in dui quis est pulvinar ullamcorper.
+                </p>
+                <p>
+                    Nunc nec neque. Morbi imperdiet, mauris ac auctor dictum, nisl ligula egestas nulla, et sollicitudin sem purus in lacus. Curabitur et ligula. Donec luctus quam quis massa volutpat, ut condimentum sapien dictum. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.
+                </p>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="related-posts">
+                <h3>Related Posts</h3>
+                <ul>
+                    <li><a href="#">The Best Hiking Trails in the World</a></li>
+                    <li><a href="#">Mountain Photography Tips for Beginners</a></li>
+                    <li><a href="#">How to Prepare for a Mountain Expedition</a></li>
+                    <li><a href="#">The Health Benefits of Nature Walks</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
