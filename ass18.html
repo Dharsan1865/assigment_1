@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery with Lightbox</title>
+    <style>
+        /* General Page Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            background-image: url('back1.webp');
+            background-size: cover;
+            background-position: center;
+            padding: 50px 0;
+            color: #fff;
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            align-items: center;
+        }
+
+        /* Thumbnail Images */
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+
+        .lightbox .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2em;
+            color: #fff;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Gallery Section -->
+    <div class="gallery-section">
+        <div class="gallery-container">
+            <!-- Gallery Item 1 -->
+            <div class="gallery-item">
+                <img src="pic1.jpg" alt="Gallery Image 1" onclick="openLightbox(this)">
+            </div>
+            <!-- Gallery Item 2 -->
+            <div class="gallery-item">
+                <img src="pic2.jpg" alt="Gallery Image 2" onclick="openLightbox(this)">
+            </div>
+            <!-- Gallery Item 3 -->
+            <div class="gallery-item">
+                <img src="pic3.jpg" alt="Gallery Image 3" onclick="openLightbox(this)">
+            </div>
+            <!-- Gallery Item 4 -->
+            <div class="gallery-item">
+                <img src="pic4.jpg" alt="Gallery Image 4" onclick="openLightbox(this)">
+            </div>
+            <!-- Gallery Item 5 -->
+            <div class="gallery-item">
+                <img src="pic5.webp" alt="Gallery Image 5" onclick="openLightbox(this)">
+            </div>
+            <!-- Gallery Item 6 -->
+            <div class="gallery-item">
+                <img src="pic6.jpg" alt="Gallery Image 6" onclick="openLightbox(this)">
+            </div>
+            <!-- Gallery Item 7 -->
+            <div class="gallery-item">
+                <img src="back1.webp" alt="Gallery Image 7" onclick="openLightbox(this)">
+            </div>
+            <!-- Gallery Item 8 -->
+            <div class="gallery-item">
+                <img src="pic9.webp" alt="Gallery Image 8" onclick="openLightbox(this)">
+            </div>
+            <!-- Gallery Item 9 -->
+            <div class="gallery-item">
+                <img src="pic8.webp" alt="Gallery Image 9" onclick="openLightbox(this)">
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <button class="close-btn" onclick="closeLightbox()">×</button>
+        <img id="lightbox-img" src="" alt="Enlarged Image">
+    </div>
+
+    <script>
+        // Function to open lightbox
+        function openLightbox(imgElement) {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImg = document.getElementById('lightbox-img');
+            lightbox.style.display = 'flex';
+            lightboxImg.src = imgElement.src; // Set the source of the lightbox image to the clicked image
+        }
+
+        // Function to close lightbox
+        function closeLightbox() {
+            var lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

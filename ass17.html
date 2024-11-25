@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Section</title>
+    <style>
+        /* General Styles for the Page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Testimonial Section */
+        .testimonial-section {
+            background-image: url('pic1.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 50px 0;
+            color: #fff;
+        }
+
+        .testimonial-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Individual Testimonial */
+        .testimonial {
+            background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-10px); /* Hover effect for testimonials */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+        }
+
+        .testimonial img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .testimonial h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        .testimonial p {
+            font-size: 1em;
+            color: #ddd;
+            line-height: 1.5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .testimonial {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Testimonial Section -->
+    <div class="testimonial-section">
+        <div class="testimonial-container">
+            <!-- Testimonial 1 -->
+            <div class="testimonial">
+                <img src="pic2.jpg" alt="Customer 1">
+                <h3>John Doe</h3>
+                <p>"This is the best service I've ever used. Highly recommend it to anyone!"</p>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial">
+                <img src="pic3.jpg" alt="Customer 2">
+                <h3>Jane Smith</h3>
+                <p>"A fantastic experience from start to finish. I will definitely be back!"</p>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial">
+                <img src="pic4.jpg" alt="Customer 3">
+                <h3>Emily Johnson</h3>
+                <p>"Absolutely wonderful service! The team went above and beyond my expectations."</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

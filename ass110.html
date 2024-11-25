@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="pic10.webp" rel="stylesheet">
+    <style>
+        /* General Page Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-image: url('pic8.webp');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            color: white;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Title */
+        .contact-title {
+            font-size: 3em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 30px;
+        }
+
+        .contact-title span {
+            color: #ff9f00;
+        }
+
+        /* Contact Blocks */
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .contact-detail {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .contact-detail:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-detail i {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .contact-detail p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-details {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .contact-detail {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contact Us Section -->
+    <div class="contact-section">
+        <div class="contact-title">
+            <h1>Contact <span>Us</span></h1>
+        </div>
+        
+        <div class="contact-details">
+            <!-- Address -->
+            <div class="contact-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <p><strong>Our Address:</strong><br>1234 Main Street,<br>Cityville, ABC</p>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-detail">
+                <i class="fas fa-phone-alt"></i>
+                <p><strong>Phone:</strong><br>(+123) 456-7890</p>
+            </div>
+
+            <!-- Email -->
+            <div class="contact-detail">
+                <i class="fas fa-envelope"></i>
+                <p><strong>Email:</strong><br>contact@website.com</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
